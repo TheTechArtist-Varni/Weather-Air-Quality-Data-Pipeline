@@ -1,0 +1,13 @@
+name: weather_pipeline
+version: "1.0"
+config-version: 2
+profile: weather_pipeline
+
+models:
+  weather_pipeline:
+    staging:
+      +materialized: view
+      +schema: staging
+    marts:
+      +materialized: table
+      +schema: marts

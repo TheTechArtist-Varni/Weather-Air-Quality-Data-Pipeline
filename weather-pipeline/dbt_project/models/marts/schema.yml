@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: daily_city_metrics
+    description: One row per city per day with weather and air-quality aggregates.
+    columns:
+      - name: city
+        tests: [not_null]
+      - name: date
+        tests: [not_null]
+      - name: hours_observed
+        tests: [not_null]
